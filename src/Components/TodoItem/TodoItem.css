@@ -1,0 +1,60 @@
+.todo--item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 90%;
+    box-shadow: rgba(92, 170, 199, 0.2) 1.95px 1.95px 2.6px;
+    padding: 8px;
+    margin: 0 auto;
+    border-radius: 6px;
+    color: #1f232d;
+    margin-bottom: .6rem;
+    background: rgba(255, 255, 255, 0.76);
+    overflow: hidden;
+}
+
+
+.btn-groups {
+    display: inline-flex;
+    height: 100%;
+    width: 25%;
+    margin-left: 20px;
+}
+
+.check-btn,
+.delete-btn {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    transition: background-color 200ms;
+    outline-color: rgb(176, 217, 254);
+}
+
+.check-btn {
+    color: rgb(30, 156, 43);
+}
+
+.delete-btn {
+    color: rgb(171, 32, 32);
+}
+
+.check-btn:hover,
+.delete-btn:hover {
+    background-color: rgba(190, 217, 251, 0.35);
+}
+
+
+.completed-items {
+    color: #4e4c4c;
+    opacity: .75;
+    text-decoration: line-through;
+    text-align: center;
+    justify-content: center;
+}

@@ -1,0 +1,108 @@
+.todo--input {
+    height: 20rem;
+    overflow-y: scroll;
+}
+
+.input--group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: auto;
+    width: 80%;
+    position: relative;
+    margin-block: 1rem;
+}
+
+.input--placeholder {
+    position: absolute;
+    top: 0;
+    left: 1.3rem;
+    font-size: .6rem;
+    transform: translateY(-7px);
+    background: #fff;
+    color: #222739;
+    padding-inline: 8px;
+}
+
+.input {
+    height: 30px;
+    width: 80%;
+    outline: none;
+    border: none;
+    border: 3px solid rgb(193, 212, 223);
+    margin-inline: auto;
+    border-radius: 6px;
+    text-indent: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 500ms;
+}
+
+.input:focus {
+    border-color: rgb(104, 171, 254)
+}
+
+.add-btn {
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.4rem;
+    background: linear-gradient(120deg, rgb(124, 181, 252), rgb(79, 156, 251));
+    cursor: pointer;
+    transition: box-shadow 500ms;
+    outline-color: #aee0fe;
+}
+
+.add-btn:hover {
+    box-shadow: inset rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.title-tag {
+    text-transform: uppercase;
+    margin-bottom: .4rem;
+    color: rgb(156, 168, 176);
+}
+
+.items--container {
+    position: relative;
+    background: #e9f4ff;
+    width: 80%;
+    padding: 12px 0;
+    margin-inline: auto;
+    margin-block: .4rem 1rem;
+    border-radius: 6px;
+    outline-color: #aee0fe;
+}
+
+.empty-items {
+    display: flex;
+    height: 65%;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    color: rgb(173, 182, 187);
+}
+
+.clear-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #616060;
+}
+
+.__small {
+    font-size: .785rem;
+    padding-inline: 1em;
+}
+
+.__animated {
+    animation: pulse 2000ms ease alternate infinite;
+}
+
+@keyframes pulse {
+    100% {
+        color: rgb(146, 154, 164);
+    }
+}

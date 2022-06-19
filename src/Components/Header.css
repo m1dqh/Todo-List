@@ -1,0 +1,15 @@
+.header--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    background: linear-gradient(120deg, rgb(124, 181, 252), rgb(79, 156, 251));
+}
+
+.todo--title {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 0px 8px rgba(32, 116, 219, 0.75)
+}
