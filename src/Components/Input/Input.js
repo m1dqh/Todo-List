@@ -5,7 +5,6 @@ import { nanoid } from 'nanoid'
 
 export default function Input() {
     const [items, setItems] = useState({
-        id: nanoid(),
         uncompletedItems: JSON.parse(localStorage.getItem('uncompletedItems')) || [],
         confirmedItems: JSON.parse(localStorage.getItem('confirmedItems')) || [],
         all: false,
@@ -62,7 +61,7 @@ export default function Input() {
         setItems(prevItems => {
             return {
                 ...prevItems,
-                items: newArray
+                uncompletedItems: newArray
             }
         })
 
@@ -100,7 +99,7 @@ export default function Input() {
     }, [items])
 
     const todoItems = items.uncompletedItems.map(item => {
-        return <TodoItem key={items.id} item={item} deleteItem={deleteItem} confirmItem={confirmItem} >
+        return <TodoItem key={nanoid()} item={item} deleteItem={deleteItem} confirmItem={confirmItem} >
         <div className="btn-groups">
             <button className="check-btn" onClick={confirmItem} title="Confirm">✔</button>
             <button className="delete-btn" onClick={deleteItem} title="Delete">✘</button>
@@ -109,7 +108,7 @@ export default function Input() {
     })
     const completedTodoItems = items.confirmedItems.map(item => {
         return <TodoItem
-                key={items.id}
+                key={nanoid()}
                 item={item}
                 items={{...items}}
                 modifier="completed-items"
@@ -127,7 +126,6 @@ export default function Input() {
                 <>
                     < CompletedTasks
                     isOpen={items.uncompleted}
-
                     arr={items.uncompletedItems.length}
                     child={todoItems}
                     description="You don't have any uncompleted Tasks!"
